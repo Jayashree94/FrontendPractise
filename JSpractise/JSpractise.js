@@ -1,15 +1,9 @@
-
-
-var x =7;
-
-
-function getName(){
-    console.log("Hello");
-
-
+function x() {
+    var a =7;
+    function y(){
+        console.log(y);
+    }
+    y();
 }
 
-getName();
-console.log(x);
-console.log(getName);
-
+x();
