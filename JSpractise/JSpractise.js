@@ -1,15 +1,10 @@
-function x(){
-    for(var i =0;i<=5;i++){
-        function close(i){
-        setTimeout(function(){
-            console.log(i)
-
-        }, i *1000)
-         
-    }
-    close(i);
-   
-    }
+var b = function(param){
+    console.log(param);
 }
 
-x();
+
+function xyz(){
+
+}
+
+b(xyz);
