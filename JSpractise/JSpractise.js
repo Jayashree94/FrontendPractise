@@ -1,10 +1,7 @@
 var b = function(param){
-    console.log(param);
-}
-
-
-function xyz(){
+    return function xoz(){
 
 }
+}
 
-b(xyz);
+console.log(b());
