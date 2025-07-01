@@ -5,14 +5,14 @@ let m = Math.floor(n/2)
 
  const swap = (a,b) =>{
     console.log(a,b);
-        let temp=arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
-        console.log("b",arr[b]);
+        let temp=a;
+        a = b;
+        b = temp;
+        
     }
     
     for(let i=0;i < m;i++){
-        swap(i, n-i-1);
+        swap(arr[i], arr[n-i-1]);
     }
 
      return arr.join('');
