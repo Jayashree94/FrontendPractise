@@ -1,9 +1,16 @@
 const cart =["dress","shoe","purse"];
 
-api.createOrder(cart,function(){
-    api.proceedPayments(orderId,function(){
-        api.paymentdone(paymentid,function(){
+createOrder(cart, function (orderId){
+    proceedToPayments(orderId, function (paymentID){
+        showOrderSummary(paymentID, function (){
+            updateBalance();
         })
+    })
+});
 
-    });
-})
+createOrder(cart)
+.then((orderId) => proceedToPayments(orderId))
+.then((paymentID) => showOrderSummary(paymentID))
+.then((paymentID) =>updateBalance(paymentID) )
+
+
